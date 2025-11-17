@@ -9,26 +9,45 @@ app.use(cors());
 app.use(express.json());
 
 // In-memory database (in production, use MongoDB, PostgreSQL, etc.)
+
+
 let patients = [
   {
     id: 1, name: "Amina Nakato", age: 8, location: "Kampala, Uganda",
     condition: "Cardiac Surgery", urgency: "Critical", targetAmount: 5000,
     raisedAmount: 2300, donorCount: 45, verified: true, daysLeft: 15,
-    hospital: "Mulago Hospital", lastUpdate: new Date().toISOString()
+    hospital: "Mulago Hospital", lastUpdate: new Date().toISOString(),
+    walletAddress: "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY", // ADD THIS
+    story: "Amina was born with a congenital heart defect. She needs urgent cardiac surgery to survive."
   },
   {
     id: 2, name: "Joseph Okello", age: 45, location: "Gulu, Uganda",
     condition: "Cancer Treatment", urgency: "High", targetAmount: 8000,
     raisedAmount: 4500, donorCount: 62, verified: true, daysLeft: 30,
-    hospital: "Uganda Cancer Institute", lastUpdate: new Date().toISOString()
+    hospital: "Uganda Cancer Institute", lastUpdate: new Date().toISOString(),
+    walletAddress: "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty", // ADD THIS
+    story: "Joseph is a father of four battling stage 3 cancer. He needs chemotherapy treatment."
   },
   {
     id: 3, name: "Grace Achieng", age: 12, location: "Nairobi, Kenya",
     condition: "Kidney Transplant", urgency: "Critical", targetAmount: 15000,
     raisedAmount: 8900, donorCount: 128, verified: true, daysLeft: 10,
-    hospital: "Kenyatta Hospital", lastUpdate: new Date().toISOString()
+    hospital: "Kenyatta Hospital", lastUpdate: new Date().toISOString(),
+    walletAddress: "5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy", // ADD THIS
+    story: "Grace's kidneys are failing rapidly. She needs a kidney transplant urgently."
+  },
+  {
+    id: 4, name: "Kelly Joramz", age: 42, location: "Abuja, Nigeria",
+    condition: "HIV/AIDS", urgency: "Critical", targetAmount: 18000,
+    raisedAmount: 7900, donorCount: 128, verified: true, daysLeft: 30,
+    hospital: "Niger International Hospital", lastUpdate: new Date().toISOString(),
+    walletAddress: "5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw", // ADD THIS
+    story: "Kelly needs urgent HIV/AIDS treatment and medication to survive."
   }
 ];
+
+
+
 
 let donations = [];
 let stats = {

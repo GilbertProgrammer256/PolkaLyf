@@ -1,7 +1,7 @@
 {
   "name": "polkahealth-backend",
   "version": "1.0.0",
-  "description": "Backend API for PolkaHealth donation platform",
+  "description": "Backend API for PolkaLyf donation platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
